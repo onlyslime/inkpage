@@ -1,0 +1,359 @@
+@import "tailwindcss";
+
+/*
+ * UI 主题：灵感来自 awesome-design-md / getdesign.md 公开 DESIGN.md 摘要中的品牌气质
+ *（Vercel、Linear、Cursor、Notion、Stripe、Supabase、Ollama、Raycast、Claude、Resend）。
+ * 色值在站内手工对齐语义角色，非各站官方资源文件逐字复制。
+ */
+
+/* 默认（vercel）：SSR 首屏与未设置 data-ui-theme 时一致 */
+:root {
+  --background: #fafafa;
+  --foreground: #0a0a0a;
+  --muted: #f4f4f5;
+  --muted-foreground: #52525b;
+  --border: #e4e4e7;
+  --accent: #000000;
+  --accent-foreground: #fafafa;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --ring: #a1a1aa;
+  --link: #0d9488;
+  --link-hover: #0f766e;
+  --table-head: #71717a;
+  --section-divider: #e4e4e7;
+  --warning-bg: #fffbeb;
+  --warning-border: #fde68a;
+  --warning-text: #78350f;
+  --switch-off: #d4d4d8;
+  --switch-on: #059669;
+  --pretext: #27272a;
+}
+
+html[data-ui-theme="vercel"] {
+  --background: #fafafa;
+  --foreground: #0a0a0a;
+  --muted: #f4f4f5;
+  --muted-foreground: #52525b;
+  --border: #e4e4e7;
+  --accent: #000000;
+  --accent-foreground: #fafafa;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --ring: #a1a1aa;
+  --link: #0d9488;
+  --link-hover: #0f766e;
+  --table-head: #71717a;
+  --section-divider: #e4e4e7;
+  --warning-bg: #fffbeb;
+  --warning-border: #fde68a;
+  --warning-text: #78350f;
+  --switch-off: #d4d4d8;
+  --switch-on: #059669;
+  --pretext: #27272a;
+}
+
+/* Linear — 深底、紫点缀 */
+html[data-ui-theme="linear"] {
+  --background: #08090a;
+  --foreground: #f7f8f8;
+  --muted: #141517;
+  --muted-foreground: #9ca3af;
+  --border: #26272c;
+  --accent: #5e6ad2;
+  --accent-foreground: #ffffff;
+  --card: #0d0e10;
+  --card-foreground: #f7f8f8;
+  --popover: #141517;
+  --popover-foreground: #f7f8f8;
+  --ring: #5e6ad2;
+  --link: #8b93f3;
+  --link-hover: #a5adff;
+  --table-head: #6b7280;
+  --section-divider: #26272c;
+  --warning-bg: #2a1f0d;
+  --warning-border: #854d0e;
+  --warning-text: #fde68a;
+  --switch-off: #3f3f46;
+  --switch-on: #5e6ad2;
+  --pretext: #e4e4e7;
+}
+
+/* Cursor — 深色、渐变感强调 */
+html[data-ui-theme="cursor"] {
+  --background: #0c0c0e;
+  --foreground: #ececec;
+  --muted: #161618;
+  --muted-foreground: #9b9b9b;
+  --border: #2a2a2e;
+  --accent: #f97316;
+  --accent-foreground: #0c0c0e;
+  --card: #121214;
+  --card-foreground: #ececec;
+  --popover: #161618;
+  --popover-foreground: #ececec;
+  --ring: #f97316;
+  --link: #34d399;
+  --link-hover: #6ee7b7;
+  --table-head: #737373;
+  --section-divider: #2a2a2e;
+  --warning-bg: #292524;
+  --warning-border: #92400e;
+  --warning-text: #fde68a;
+  --switch-off: #404040;
+  --switch-on: #f97316;
+  --pretext: #d4d4d4;
+}
+
+/* Notion — 暖纸感 */
+html[data-ui-theme="notion"] {
+  --background: #f7f6f3;
+  --foreground: #37352f;
+  --muted: #f1f0ed;
+  --muted-foreground: #6f6f6f;
+  --border: #e9e9e7;
+  --accent: #37352f;
+  --accent-foreground: #f7f6f3;
+  --card: #ffffff;
+  --card-foreground: #37352f;
+  --popover: #ffffff;
+  --popover-foreground: #37352f;
+  --ring: #9b9a97;
+  --link: #0b6e99;
+  --link-hover: #084c6d;
+  --table-head: #9b9a97;
+  --section-divider: #e9e9e7;
+  --warning-bg: #fdf6e3;
+  --warning-border: #ecd08a;
+  --warning-text: #5c4a21;
+  --switch-off: #d4d4d4;
+  --switch-on: #0b6e99;
+  --pretext: #4a4844;
+}
+
+/* Stripe — 浅底、紫强调 */
+html[data-ui-theme="stripe"] {
+  --background: #f6f9fc;
+  --foreground: #0a2540;
+  --muted: #eef2f7;
+  --muted-foreground: #425466;
+  --border: #e3e8ee;
+  --accent: #635bff;
+  --accent-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #0a2540;
+  --popover: #ffffff;
+  --popover-foreground: #0a2540;
+  --ring: #635bff;
+  --link: #0a2540;
+  --link-hover: #635bff;
+  --table-head: #697386;
+  --section-divider: #e3e8ee;
+  --warning-bg: #fff8e6;
+  --warning-border: #fcd34d;
+  --warning-text: #7c2d12;
+  --switch-off: #cbd5e1;
+  --switch-on: #635bff;
+  --pretext: #1e293b;
+}
+
+/* Supabase — 深底、翠绿 */
+html[data-ui-theme="supabase"] {
+  --background: #1c1c1c;
+  --foreground: #ececec;
+  --muted: #252525;
+  --muted-foreground: #a1a1aa;
+  --border: #3f3f46;
+  --accent: #3ecf8e;
+  --accent-foreground: #102416;
+  --card: #232323;
+  --card-foreground: #ececec;
+  --popover: #2a2a2a;
+  --popover-foreground: #ececec;
+  --ring: #3ecf8e;
+  --link: #4ade80;
+  --link-hover: #86efac;
+  --table-head: #a1a1aa;
+  --section-divider: #3f3f46;
+  --warning-bg: #292524;
+  --warning-border: #a16207;
+  --warning-text: #fef08a;
+  --switch-off: #52525b;
+  --switch-on: #3ecf8e;
+  --pretext: #e5e5e5;
+}
+
+/* Ollama — 终端单色 */
+html[data-ui-theme="ollama"] {
+  --background: #0d0d0d;
+  --foreground: #e5e5e5;
+  --muted: #171717;
+  --muted-foreground: #a3a3a3;
+  --border: #262626;
+  --accent: #22c55e;
+  --accent-foreground: #052e16;
+  --card: #141414;
+  --card-foreground: #e5e5e5;
+  --popover: #171717;
+  --popover-foreground: #e5e5e5;
+  --ring: #22c55e;
+  --link: #4ade80;
+  --link-hover: #86efac;
+  --table-head: #737373;
+  --section-divider: #262626;
+  --warning-bg: #1c1917;
+  --warning-border: #854d0e;
+  --warning-text: #fde68a;
+  --switch-off: #404040;
+  --switch-on: #22c55e;
+  --pretext: #d4d4d4;
+}
+
+/* Raycast — 深灰、品红点缀 */
+html[data-ui-theme="raycast"] {
+  --background: #1a1a1e;
+  --foreground: #f4f4f5;
+  --muted: #232328;
+  --muted-foreground: #a1a1aa;
+  --border: #3f3f46;
+  --accent: #ff6363;
+  --accent-foreground: #ffffff;
+  --card: #202024;
+  --card-foreground: #f4f4f5;
+  --popover: #27272c;
+  --popover-foreground: #f4f4f5;
+  --ring: #ff6363;
+  --link: #a78bfa;
+  --link-hover: #c4b5fd;
+  --table-head: #9ca3af;
+  --section-divider: #3f3f46;
+  --warning-bg: #292524;
+  --warning-border: #b45309;
+  --warning-text: #fde68a;
+  --switch-off: #52525b;
+  --switch-on: #ff6363;
+  --pretext: #e4e4e7;
+}
+
+/* Claude — 暖陶土 */
+html[data-ui-theme="claude"] {
+  --background: #faf8f5;
+  --foreground: #3d3929;
+  --muted: #f3f0ea;
+  --muted-foreground: #6b6560;
+  --border: #e8e4dc;
+  --accent: #d97757;
+  --accent-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #3d3929;
+  --popover: #ffffff;
+  --popover-foreground: #3d3929;
+  --ring: #d97757;
+  --link: #b45309;
+  --link-hover: #92400e;
+  --table-head: #8c8578;
+  --section-divider: #e8e4dc;
+  --warning-bg: #fffbeb;
+  --warning-border: #fcd34d;
+  --warning-text: #78350f;
+  --switch-off: #d6d3d1;
+  --switch-on: #d97757;
+  --pretext: #44403c;
+}
+
+/* Resend — 极简深黑 */
+html[data-ui-theme="resend"] {
+  --background: #000000;
+  --foreground: #ededed;
+  --muted: #0a0a0a;
+  --muted-foreground: #a3a3a3;
+  --border: #262626;
+  --accent: #ffffff;
+  --accent-foreground: #000000;
+  --card: #0a0a0a;
+  --card-foreground: #ededed;
+  --popover: #171717;
+  --popover-foreground: #ededed;
+  --ring: #737373;
+  --link: #ededed;
+  --link-hover: #ffffff;
+  --table-head: #737373;
+  --section-divider: #262626;
+  --warning-bg: #1c1917;
+  --warning-border: #78716c;
+  --warning-text: #fde68a;
+  --switch-off: #404040;
+  --switch-on: #ededed;
+  --pretext: #d4d4d4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-ring: var(--ring);
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
+  --color-table-head: var(--table-head);
+  --color-section-divider: var(--section-divider);
+  --color-warning-bg: var(--warning-bg);
+  --color-warning-border: var(--warning-border);
+  --color-warning-text: var(--warning-text);
+  --color-switch-off: var(--switch-off);
+  --color-switch-on: var(--switch-on);
+  --color-pretext: var(--pretext);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+/* 与 data-site-font 同步，供 Tailwind font-sans 与 body 一致 */
+html[data-site-font="geist"] {
+  --font-sans: var(--font-geist-sans), "PingFang SC", "Microsoft YaHei",
+    ui-sans-serif, sans-serif;
+}
+
+html[data-site-font="system"] {
+  --font-sans: ui-sans-serif, system-ui, "Segoe UI", "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+}
+
+html[data-site-font="serif"] {
+  --font-sans: var(--font-noto-serif-sc), "Songti SC", "STSong", Georgia, serif;
+}
+
+html[data-site-font="mono"] {
+  --font-sans: var(--font-geist-mono), ui-monospace, "Cascadia Code",
+    "Sarasa Gothic SC", monospace;
+}
+
+/* LXGW WenKai TC（Google Fonts），楷体阅读感 */
+html[data-site-font="wenkai"] {
+  --font-sans: var(--font-lxgw-wenkai), "KaiTi", "STKaiti", "Songti SC", serif;
+}
+
+/* Zpix：中英日点阵；关闭灰度抗锯齿以略保留栅格感（各端表现不一） */
+html[data-site-font="pixel"] {
+  --font-sans: var(--font-zpix), ui-monospace, monospace;
+}
+
+html[data-site-font="pixel"] body {
+  -webkit-font-smoothing: none;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
