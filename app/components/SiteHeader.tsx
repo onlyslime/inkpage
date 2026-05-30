@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSite } from "./SiteProvider";
@@ -9,25 +9,7 @@ export function SiteHeader() {
   const { locale, toggleLocale } = useSite();
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [authed, setAuthed] = useState(false);
-
-  useEffect(() => {
-    setAuthed(
-      document.cookie.includes("site_auth=1") ||
-        localStorage.getItem("intro_access_granted") === "1"
-    );
-  }, []);
-
-  const isProtectedPage =
-    pathname === "/intro" || pathname.startsWith("/projects");
-  const showRealName = isProtectedPage && authed;
-  const name = showRealName
-    ? locale === "zh"
-      ? "你的名字"
-      : "Your Name"
-    : locale === "zh"
-      ? "你的名字"
-      : "Your Name";
+  const name = locale === "zh" ? "墨站" : "Inkpage";
   const nav =
     locale === "zh"
       ? [

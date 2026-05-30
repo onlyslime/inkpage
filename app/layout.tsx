@@ -57,10 +57,10 @@ const zpix = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "Your Name",
-    template: "%s · Your Name",
+    default: "墨站",
+    template: "%s · 墨站",
   },
-  description: "Your Name — personal site",
+  description: "墨站 · 个人网页框架",
   icons: {
     icon: "/favicon.ico",
     apple: "/favicon.ico",

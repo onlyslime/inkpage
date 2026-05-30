@@ -13,21 +13,18 @@ export const INSTITUTION_OFFICIAL_URL = "https://example.edu/";
 /** 自我介绍拆段：中间段为可链接校名 */
 export const introBioSegments = {
   zh: {
-    before: "你的名字是",
-    linkLabel: "示例大学",
-    after:
-      "某专业的在读学生。他的研究兴趣涵盖人工智能、机器学习及软件工程。他曾主导多项有趣的项目，相关成果在竞赛中获得认可。",
+    before: "墨站是一个",
+    linkLabel: "个人网页框架",
+    after: "，用于展示博客、项目、生活记录和友链。",
   },
   en: {
-    before:
-      "Your Name is a student in the Department of Example Major at ",
-    linkLabel: "Example University",
-    after:
-      ". Their research interests lie in Artificial Intelligence, Machine Learning, and Software Engineering. They have led several interesting projects, with their work recognized in competitions.",
+    before: "Inkpage is a ",
+    linkLabel: "personal website framework",
+    after: " for blogs, projects, life notes, and friend links.",
   },
 } as const;
 
-/** 灵动模式用：纯文本（含「示例大学」字样，无超链接） */
+/** 灵动模式用：纯文本（无超链接） */
 export const INTRO_BIO_LIVELY_PLAIN = {
   zh:
     introBioSegments.zh.before +
@@ -64,7 +61,7 @@ export const introCopy = {
   zh: {
     title: "介绍",
     sectionHeading: "关于我",
-    photoAlt: "你的名字",
+    photoAlt: "墨站",
     cvLinkLabel: "简历",
     researchPlanLinkLabel: "研究计划",
     profileHeading: "个人信息",
@@ -96,7 +93,7 @@ export const introCopy = {
   en: {
     title: "About",
     sectionHeading: "WHOAMI",
-    photoAlt: "Your Name",
+    photoAlt: "Inkpage",
     cvLinkLabel: "Curriculum Vitae (Resume)",
     researchPlanLinkLabel: "Research Plan",
     profileHeading: "Personal Info",
@@ -430,7 +427,7 @@ export const lifeCopy = {
     momentsPageTitle: "生活动态",
     footprintHeading: "我的足迹",
     feedHeading: "动态",
-    displayName: "你的名字",
+    displayName: "墨站",
     scoreLabel: "足迹分",
     legendLong: "久居 · 5 分",
     legendTour: "旅游 · 3 分",
@@ -451,7 +448,7 @@ export const lifeCopy = {
     momentsPageTitle: "Life Moments",
     footprintHeading: "Footprint",
     feedHeading: "Feed",
-    displayName: "Your Name",
+    displayName: "Inkpage",
     scoreLabel: "Score",
     legendLong: "Lived · 5 pts",
     legendTour: "Travel · 3 pts",

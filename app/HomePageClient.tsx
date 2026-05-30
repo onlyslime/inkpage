@@ -7,8 +7,8 @@ import { TypewriterText } from "./components/TypewriterText";
 
 const copy = {
   zh: {
-    name: "你的名字",
-    tagline: "你的个性签名",
+    name: "墨站",
+    tagline: "一个个人网页框架",
     nav: [
       { href: "/intro", label: "介绍" },
       { href: "/projects", label: "项目" },
@@ -18,8 +18,8 @@ const copy = {
     ],
   },
   en: {
-    name: "Your Name",
-    tagline: "Your personal tagline",
+    name: "Inkpage",
+    tagline: "A personal website framework",
     nav: [
       { href: "/intro", label: "About" },
       { href: "/projects", label: "Projects" },

@@ -40,6 +40,20 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# resources
-personal-site\data\about_photos\resource\二等奖学金.jpg
-personal-site\data\about_photos\resource\学术科技奖.jpg
+# local agent docs
+/AGENTS.md
+/CLAUDE.md
+
+# private content skeletons
+/data/blogs/*
+!/data/blogs/README.md
+/data/projects/*
+!/data/projects/README.md
+/data/friends/*
+!/data/friends/README.md
+/data/about_photos/*
+!/data/about_photos/README.md
+/data/life_photos/*
+!/data/life_photos/README.md
+!/data/life_photos/footprint.json
+/data/life_photos/progress_bar/*
